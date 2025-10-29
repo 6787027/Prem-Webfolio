@@ -18,7 +18,7 @@ export default function aboutme() {
     ]
     return (
         <Animatedback>
-            <nav className="relative w-full bg-gray-800 text-white shadow-lg">
+            <nav className="relative w-full bg-gray-800 text-white shadow-md">
                 <div className="container mx-auto flex items-center justify-between p-4">
                     <div>
                         <Link href="/" className="text-xl font-bold text-orange-400 transition hover:text-orange-300">
@@ -26,7 +26,7 @@ export default function aboutme() {
                         </Link>
                     </div>
 
-                    <div className="hidden space-x-6 lg:flex">
+                    <div className="hidden space-x-6 md:flex">
                         {links.map((link) => (
                             <Link key={link.href} href={link.href} className="transition hover:text-gray-300">
                                 {link.label}
@@ -34,7 +34,7 @@ export default function aboutme() {
                         ))}
                     </div>
 
-                    <div className="lg:hidden">
+                    <div className="md:hidden">
                         <button onClick={() => setIsOpen(!isOpen)} className="z-30 text-white">
                             {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
                         </button>
@@ -64,11 +64,11 @@ export default function aboutme() {
                 </div>
             </nav>
 
-            <main className="w-full min-h-screen p-6 lg:px-16 lg:px-24">
+            <main className="w-full min-h-screen p-6 md:px-16 lg:px-24">
 
                 <section className="mb-12">
                     <h1 className="font-bold text-5xl mb-4">Get to know me...</h1>
-                    <p className="w-full lg:w-3/4 lg:w-2/3 text-lg text-white leading-relaxed">
+                    <p className="w-full md:w-3/4 lg:w-2/3 text-lg text-white leading-relaxed">
                         I'm Nattanon (Prem), a Computer Science student with a deep-seated passion
                         for analysis. This analytical mindset drives my strong interest in
                         Business Analysis and Data Analytics, where I can leverage my technical
@@ -80,9 +80,9 @@ export default function aboutme() {
                 <section>
                     <h1 className="font-bold text-4xl text-center mb-8">Skills</h1>
 
-                    <div className="flex flex-col lg:flex-row gap-8">
+                    <div className="flex flex-col md:flex-row gap-8">
 
-                        <div className="w-full lg:w-1/2 bg-white rounded-2xl shadow-xl p-6">
+                        <div className="w-full md:w-1/2 bg-white rounded-2xl shadow-xl p-6">
                             <h3 className="text-xl tracking-wide text-orange-500 font-bold text-center">
                                 Soft Skills
                             </h3>
@@ -98,7 +98,7 @@ export default function aboutme() {
                             </div>
                         </div>
 
-                        <div className="w-full lg:w-1/2 bg-white rounded-2xl shadow-xl p-6">
+                        <div className="w-full md:w-1/2 bg-white rounded-2xl shadow-xl p-6">
                             <h3 className="text-xl tracking-wide text-orange-500 font-bold text-center">
                                 Hard Skills
                             </h3>
