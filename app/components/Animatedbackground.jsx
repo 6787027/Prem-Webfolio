@@ -2,7 +2,7 @@
 
 export default function AnimatedBackground({ children }) {
   return (
-    <div className="relative h-full w-full overflow-hidden  bg-gray-950 text-white flex-col">
+    <div className="relative min-h-screen w-full overflow-hidden  bg-gray-950 text-white flex-col">
       <div
         className="
           absolute top-0 left-0 
