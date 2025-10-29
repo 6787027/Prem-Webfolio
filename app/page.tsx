@@ -44,7 +44,7 @@ export default function Home() {
         <div
           className={`
           absolute top-0 left-0 z-20
-          h-screen w-full 
+          h-full w-full 
           bg-gray-900 bg-opacity-95 backdrop-blur-sm
           flex flex-col items-center justify-center gap-8
           transition-transform duration-300 ease-in-out
