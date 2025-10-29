@@ -27,7 +27,7 @@ export default function AnimatedBackground({ children }) {
           opacity-30 
           blur-3xl 
           filter
-          animate-flare [animation-delay:-4s] // หน่วงเวลาให้เคลื่อนไหวไม่พร้อมกัน
+          animate-flare [animation-delay:-4s] 
           z-10
           overflow-hidden
         "
