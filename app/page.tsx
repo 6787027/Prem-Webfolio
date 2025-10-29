@@ -1,65 +1,112 @@
-import Image from "next/image";
+"use client"
+import Animatedback from './components/Animatedbackground'
+import Link from 'next/link'
+import Image from 'next/image'
+import prempic from './components/1000022981.png'
+import { useState } from 'react'
+import { HiMenu, HiX } from 'react-icons/hi'
+
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const links = [
+    { href: '/', label: 'Home' },
+    { href: '/aboutme', label: 'About me' },
+    { href: '/project', label: 'Project' },
+    { href: '/contact', label: 'Contact Me' },
+  ]
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <Animatedback>
+      <nav className="relative w-full bg-gray-800 text-white shadow-md">
+        <div className="container mx-auto flex items-center justify-between p-4">
+          <div>
+            <Link href="/" className="text-xl font-bold text-orange-400 transition hover:text-orange-300">
+              NattanonWebfolio
+            </Link>
+          </div>
+
+          <div className="hidden space-x-6 md:flex">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className="transition hover:text-gray-300">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="z-30 text-white">
+              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`
+          absolute top-0 left-0 z-20
+          h-screen w-full 
+          bg-gray-900 bg-opacity-95 backdrop-blur-sm
+          flex flex-col items-center justify-center gap-8
+          transition-transform duration-300 ease-in-out
+          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        `}
+        >
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-2xl text-white transition hover:text-orange-400"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+      <div
+        className="
+          container mx-auto 
+          flex flex-col-reverse md:flex-row  
+          items-center 
+          gap-8                          
+          px-8 py-12 md:px-20 md:py-24     
+        "
+      >
+        <div
+          className="
+            w-full md:w-2/3                
+            text-center md:text-left        
+          "
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-orange-400">
+            Nattanon Ngamkham
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="pt-5 text-lg text-gray-200">
+            "A driven second-year Computer Science student with an insatiable
+            curiosity for mastering new technologies and solving complex
+            challenges."
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div
+          className="
+            w-full max-w-[250px] md:w-1/3 md:max-w-none // <-- 10. มือถือ: จำกัดขนาด / Desktop: กว้าง 1/3
+          "
+        >
+          <Image
+            src={prempic}
+            alt="Nattanon Ngamkham"
+            className="rounded-full shadow-2xl"
+            width={400}
+            height={400}
+            priority
+          />
         </div>
-      </main>
-    </div>
-  );
+      </div>
+
+
+
+
+    </Animatedback>
+  )
 }
