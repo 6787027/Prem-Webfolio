@@ -21,7 +21,7 @@ export default function project() {
     return (
 
         <Animatedback>
-            <nav className="relative w-full bg-gray-800 text-white shadow-md">
+            <nav className="relative w-full bg-gray-800 text-white shadow-lg">
                 <div className="container mx-auto flex items-center justify-between p-4">
                     <div>
                         <Link href="/" className="text-xl font-bold text-orange-400 transition hover:text-orange-300">
@@ -29,7 +29,7 @@ export default function project() {
                         </Link>
                     </div>
 
-                    <div className="hidden space-x-6 md:flex">
+                    <div className="hidden space-x-6 lg:flex">
                         {links.map((link) => (
                             <Link key={link.href} href={link.href} className="transition hover:text-gray-300">
                                 {link.label}
@@ -37,7 +37,7 @@ export default function project() {
                         ))}
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <button onClick={() => setIsOpen(!isOpen)} className="z-30 text-white">
                             {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
                         </button>
@@ -72,7 +72,7 @@ export default function project() {
 
                 <h1 className="font-bold text-5xl mb-8">Contact Me</h1>
 
-                <div className="w-full max-w-md rounded-lg bg-white p-6 text-black shadow-xl">
+                <div className="w-full max-w-lg rounded-lg bg-white p-6 text-black shadow-xl">
                     <div className="flex flex-col space-y-4">
 
                         <a
