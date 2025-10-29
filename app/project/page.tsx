@@ -233,7 +233,7 @@ export default function ProjectPage() {
 
             <p className="text-gray-700 text-sm mt-4">
               This project involved developing my personal web portfolio from scratch to showcase my technical skills and project experience. I used Next.js and Tailwind CSS to design and implement a modern, fully responsive user interface... (etc)
-            </IP>
+            </p>
           </div>
 
         </div>
