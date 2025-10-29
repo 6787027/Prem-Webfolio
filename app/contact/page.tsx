@@ -82,26 +82,6 @@ export default function ContactPage() {
               <FiMail className="h-5 w-5 text-orange-500" />
               <span className="font-medium">Nattanon.nga@student.mahidol.edu</span>
             </a>
-
-            <a
-              href="https://www.facebook.com/nattanon.ngamkham?"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 transition hover:text-orange-600"
-            >
-              <FiFacebook className="h-5 w-5 text-orange-500" />
-              <span className="font-medium">Nattanon Ngamkham</span>
-            </a>
-
-            <a
-              href="https://instagram.com/pr3merp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 transition hover:text-orange-600"
-            >
-              <FiInstagram className="h-5 w-5 text-orange-500" />
-              <span className="font-medium">pr3merp</span>
-            </a>
           </div>
         </div>
       </main>

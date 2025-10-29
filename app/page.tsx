@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import prempic from './components/1000022981.png'
+import prempic from './components/1000023004.png'
 import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 
