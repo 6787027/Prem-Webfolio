@@ -1,11 +1,9 @@
 "use client"
-import Animatedback from './components/Animatedbackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import prempic from './components/1000022981.png'
 import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
-
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,8 +14,9 @@ export default function Home() {
     { href: '/project', label: 'Project' },
     { href: '/contact', label: 'Contact Me' },
   ]
+  
   return (
-    <Animatedback>
+    <div className="bg-gray-950 text-white min-h-dvh flex flex-col">
       <nav className="relative w-full bg-gray-800 text-white shadow-md">
         <div className="container mx-auto flex items-center justify-between p-4">
           <div>
@@ -26,7 +25,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="hidden space-x-6 md:flex">
+          <div className="hidden space-x-6 lg:flex">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="transition hover:text-gray-300">
                 {link.label}
@@ -34,7 +33,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="z-30 text-white">
               {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
             </button>
@@ -43,13 +42,13 @@ export default function Home() {
 
         <div
           className={`
-          absolute top-0 left-0 z-20
-          h-screen w-full 
-          bg-gray-900 bg-opacity-95 backdrop-blur-sm
-          flex flex-col items-center justify-center gap-8
-          transition-transform duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        `}
+            absolute top-0 left-0 z-20
+            h-screen w-full 
+            bg-gray-900 bg-opacity-95 backdrop-blur-sm
+            flex flex-col items-center justify-center gap-8
+            transition-transform duration-300 ease-in-out
+            ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+          `}
         >
           {links.map((link) => (
             <Link
@@ -63,22 +62,23 @@ export default function Home() {
           ))}
         </div>
       </nav>
+      
       <div
         className="
           container mx-auto 
-          flex flex-col-reverse md:flex-row  
+          flex flex-col-reverse lg:flex-row 
           items-center 
-          gap-8                          
-          px-8 py-12 md:px-20 md:py-24     
+          gap-8 
+          px-8 py-12 lg:px-20 lg:py-24 
         "
       >
         <div
           className="
-            w-full md:w-2/3                
-            text-center md:text-left        
+            w-full lg:w-2/3 
+            text-center lg:text-left 
           "
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-400">
+          <h1 className="text-4xl lg:text-5xl font-bold text-orange-400">
             Nattanon Ngamkham
           </h1>
           <p className="pt-5 text-lg text-gray-200">
@@ -90,7 +90,7 @@ export default function Home() {
 
         <div
           className="
-            w-full max-w-[250px] md:w-1/3 md:max-w-none // <-- 10. มือถือ: จำกัดขนาด / Desktop: กว้าง 1/3
+            w-full max-w-[250px] lg:w-1/3 lg:max-w-none
           "
         >
           <Image
@@ -103,10 +103,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-
-
-
-    </Animatedback>
+    </div>
   )
 }
