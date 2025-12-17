@@ -108,6 +108,7 @@ export default function AboutMePage() {
                 <span className="bg-red-100 text-red-950 font-semibold px-4 py-2 rounded-full">Jira</span>
                 <span className="bg-red-100 text-red-950 font-semibold px-4 py-2 rounded-full">Draw.io</span>
                 <span className="bg-red-100 text-red-950 font-semibold px-4 py-2 rounded-full">Microsoft Office</span>
+                <span className="bg-red-100 text-red-950 font-semibold px-4 py-2 rounded-full">Power BI</span>
               </div>
             </div>
           </div>

@@ -69,6 +69,76 @@ export default function ProjectPage() {
 
           <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
             <Link
+              href="https://drive.google.com/drive/folders/1hH1nNZRSvxG-kypZ0J3S86MMiQqS1ONE?usp=sharing" 
+              target="_blank" rel="noopener noreferrer"
+              className="text-xl font-semibold text-orange-700 transition hover:text-orange-900"
+            >
+              Business Analysis Case Studies
+            </Link>
+
+            <div className="mt-4">
+              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
+                <HiOutlineUser /> Roles
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-blue-100 text-blue-950 font-semibold px-3 py-1 rounded-full text-xs">Business Analyst</span>
+                <span className="bg-blue-100 text-blue-950 font-semibold px-3 py-1 rounded-full text-xs">Data Analyst</span>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
+                <HiOutlineChip /> Tools
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-yellow-100 text-yellow-950 font-semibold px-3 py-1 rounded-full text-xs">Power BI</span>
+                <span className="bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full text-xs">Power Query</span>
+                <span className="bg-gray-200 text-gray-800 font-semibold px-3 py-1 rounded-full text-xs">DAX</span>
+              </div>
+            </div>
+
+            <p className="text-gray-700 text-sm mt-4">
+              In this project, I transformed raw retail transaction data into an interactive Power BI dashboard to identify key drivers of sales revenue. The analysis focused on evaluating product seasonality, store placement efficiency, and the impact of marketing promotions.
+            </p>
+          </div>
+
+          {/* 2. My Webfolio (Moved Here) */}
+          <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
+            <Link
+              href="/"
+              className="text-xl font-semibold text-orange-700 transition hover:text-orange-900"
+            >
+              My Webfolio (This Website)
+            </Link>
+
+            <div className="mt-4">
+              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
+                <HiOutlineUser /> Roles
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-blue-100 text-blue-950 font-semibold px-3 py-1 rounded-full text-xs">Frontend Developer</span>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
+                <HiOutlineChip /> Tools
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">Next.js</span>
+                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">React</span>
+                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <p className="text-gray-700 text-sm mt-4">
+              This project involved developing my personal web portfolio from scratch to showcase my technical skills and project experience. I used Next.js and Tailwind CSS to design and implement a modern, fully responsive user interface.
+            </p>
+          </div>
+
+          {/* 3. AirAsia Database */}
+          <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
+            <Link
               href="https://drive.google.com/drive/folders/1-I-PlCIzTJKzpW6oPeUH2xkeTNVoGArK?usp=drive_link"
               target="_blank" rel="noopener noreferrer"
               className="text-xl font-semibold text-orange-700 transition hover:text-orange-900"
@@ -100,6 +170,7 @@ export default function ProjectPage() {
             </p>
           </div>
 
+          {/* 4. Software Development Process */}
           <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
             <Link
               href="https://drive.google.com/drive/folders/1w3mANoI6JHfjXfrxJ5C3kL-5Xm1_L45D?usp=drive_link"
@@ -135,6 +206,7 @@ export default function ProjectPage() {
             </p>
           </div>
 
+          {/* 5. Software Analysis Case Studies */}
           <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
             <Link
               href="https://drive.google.com/drive/folders/1i6JObIxORDN7zFi-a2MjMrade156ihwB?usp=drive_link"
@@ -169,6 +241,7 @@ export default function ProjectPage() {
             </p>
           </div>
 
+          {/* 6. Dengue Fever Analysis */}
           <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02]">
             <Link
               href="https://drive.google.com/drive/folders/1OYGrg0U5HfmmcrTX37MpTfV3EsQ6qZs6?usp=drive_link"
@@ -198,41 +271,7 @@ export default function ProjectPage() {
             </div>
 
             <p className="text-gray-700 text-sm mt-4">
-              This project involved an initial-phase analysis of a dengue fever patient dataset from the Ministry of Public Health. I used Python and its Seaborn library to perform statistical analysis and data visualization, including applying Kendall’s Tau... (etc)
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-xl p-6 transition-transform hover:scale-[1.02] md:col-span-2">
-            <Link
-              href="/"
-              className="text-xl font-semibold text-orange-700 transition hover:text-orange-900"
-            >
-              My Webfolio
-            </Link>
-
-            <div className="mt-4">
-              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
-                <HiOutlineUser /> Roles
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-100 text-blue-950 font-semibold px-3 py-1 rounded-full text-xs">Developer</span>
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <h4 className="text-sm font-bold text-gray-600 mb-2 flex items-center gap-2">
-                <HiOutlineChip /> Tools
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">Next.js</span>
-                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">React</span>
-                <span className="bg-gray-200 text-black font-semibold px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                <span className="bg-yellow-100 text-yellow-950 font-semibold px-3 py-1 rounded-full text-xs">JavaScript (JSX)</span>
-              </div>
-            </div>
-
-            <p className="text-gray-700 text-sm mt-4">
-              This project involved developing my personal web portfolio from scratch to showcase my technical skills and project experience. I used Next.js and Tailwind CSS to design and implement a modern, fully responsive user interface... (etc)
+              This project involved an initial-phase analysis of a dengue fever patient dataset from the Ministry of Public Health. I used Python and its Seaborn library to perform statistical analysis and data visualization, including applying Kendall’s Tau correlation analysis.
             </p>
           </div>
 
